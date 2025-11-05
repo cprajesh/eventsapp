@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
  labels:
    app: events-web
- name: events-web
+ name: events-web-v2
 spec:
- replicas: 2 
+ replicas: 1 
  selector:
    matchLabels:
      app: events-web
@@ -17,7 +17,7 @@ spec:
        ver: v1.0
    spec:
      containers:
-     - image: rajeshcp/events-website:v1.0
+     - image: rajeshcp/events-website:v2.0
        name: events-web
        ports:
        - containerPort: 8080
